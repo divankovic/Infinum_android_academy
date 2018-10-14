@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="infinum.pokemonapp.pokemon.PokemonActivity"
+        android:scrollbars="vertical"/>
+
+
+    <RelativeLayout
+        android:id="@+id/empty_list_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/pokeball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pokeball_placeholder"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/no_pokemons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pokeball"
+            android:text="No Pokemons"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_pokemons"
+            android:text="To add some Pokemons \n press + icon"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/details_picture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_person_details"
+        android:background="@drawable/gradient_shape"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                tools:background="@drawable/custom_border"
+                android:background="@drawable/custom_border">
+
+                <TextView
+                    android:id="@+id/details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="25sp"
+                    tools:text="Bulbasaur"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="35dp"/>
+
+                <TextView
+                    android:id="@+id/details_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="35dp"
+                    android:scrollbars="vertical" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/constraint_layout"
+                android:layout_alignParentLeft="true"
+                android:text="Height"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/constraint_layout"
+                android:layout_centerHorizontal="true"
+                android:text="Weight"
+                android:textSize="20sp"
+                android:textColor="@color/green"/>
+
+
+            <TextView
+                android:id="@+id/tv_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/constraint_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                android:text="Category"
+                android:textSize="20sp"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/pokemon_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_height"
+                android:layout_alignStart="@+id/tv_height"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                tools:text="170 cm"/>
+
+            <TextView
+                android:id="@+id/pokemon_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_weight"
+                android:layout_alignStart="@+id/tv_weight"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                tools:text="60 kg"/>
+
+            <TextView
+                android:id="@+id/pokemon_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_cat"
+                android:layout_alignStart="@+id/tv_cat"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                tools:text="Seed"/>
+
+            <TextView
+                android:id="@+id/tv_abilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pokemon_height"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="35dp"
+                android:text="Abilities"
+                android:textSize="20sp"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/pokemon_abilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_abilities"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                tools:text="Overgrow"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pokemon_logo_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pokemon_logo"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="15dp" />
+
+            <ImageView
+                android:id="@+id/pokeball_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pokeball"
+                android:scaleType="fitCenter"
+                android:layout_below="@id/pokemon_logo_picture" />
+
+            <RelativeLayout
+                android:id="@+id/email_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pokeball_picture">
+
+                <ImageView
+                    android:id="@+id/login_email_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"/>
+
+                <EditText
+                    android:id="@+id/login_email_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="E-mail"
+                    android:layout_toRightOf="@+id/login_email_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/login_password_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lock"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/login_email_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="35dp" />
+
+                <EditText
+                    android:id="@+id/login_password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:layout_toRightOf="@+id/login_password_icon"
+                    android:layout_below="@+id/login_email_input"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:inputType="textPassword"/>
+
+                <ImageView
+                    android:id="@+id/visibility_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_visibility_on"
+                    android:layout_below="@+id/login_email_input"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:clickable="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_above="@+id/sign_up_window_button"/>
+
+    <Button
+        android:id="@+id/sign_up_window_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Sign up"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/white" />
+
+
+
+</RelativeLayout>

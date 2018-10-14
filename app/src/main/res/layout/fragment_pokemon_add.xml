@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    >
+
+
+
+
+    <ImageView
+        android:id="@+id/pokemon_picture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_person_details"
+        android:background="@color/grey_light"
+        android:clickable="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:scrollbars="vertical">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_person"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/name_input"
+                app:layout_constraintBottom_toBottomOf="@+id/name_input"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp" />
+
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                app:layout_constraintLeft_toRightOf="@+id/icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Height (cm)"
+                app:layout_constraintLeft_toLeftOf="@+id/name_input"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_input"
+                android:layout_marginRight="25dp"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Weight (kg)"
+                app:layout_constraintLeft_toLeftOf="@+id/height"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/height"
+                android:layout_marginRight="25dp"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Category"
+                app:layout_constraintLeft_toLeftOf="@+id/weight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weight"
+                android:layout_marginRight="25dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/abilities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Abilities"
+                app:layout_constraintLeft_toLeftOf="@+id/category"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category"
+                android:layout_marginRight="25dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"/>
+
+
+            <ImageView
+                android:id="@+id/description_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_description"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/abilities"
+                app:layout_constraintBottom_toBottomOf="@+id/description"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp" />
+
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                app:layout_constraintLeft_toRightOf="@+id/description_image"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/abilities"
+                android:layout_marginRight="25dp"
+                android:inputType="textMultiLine"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/cardview_light_background"/>
+
+</LinearLayout>

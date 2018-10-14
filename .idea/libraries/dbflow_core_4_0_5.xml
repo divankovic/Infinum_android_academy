@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="dbflow-core-4.0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Raizlabs.DBFlow/dbflow-core/4.0.5/5844b9d9a08c3cf3548e2eb3df5e3e17a16c505a/dbflow-core-4.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Raizlabs.DBFlow/dbflow-core/4.0.5/d591ebbde411a315ecb3b4f277f9b1f372b8ecac/dbflow-core-4.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

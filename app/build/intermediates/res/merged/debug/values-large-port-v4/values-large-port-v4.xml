@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="LandscapeTablet">false</bool>
+    <bool name="PortraitTablet">true</bool>
+    <item name="main_layout" type="layout">@layout/activity_main</item>
+</resources>

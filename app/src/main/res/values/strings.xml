@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PokemonApp</string>
+    <string name="current_user_authtoken">AuthorizationToken</string>
+    <string name="username">Username</string>
+    <string name="current_user_email">CurrentEmail</string>
+
+</resources>
